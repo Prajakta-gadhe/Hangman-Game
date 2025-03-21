@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        <div class="game-area">
+            <div class="hangman-container">
+                <div class="hangman-area">
+                    <div class="hint-area"></div>
+                    <svg id="hangman" width="250" height="300">
+                        <line x1="60" y1="30" x2="190" y2="30" stroke="black" stroke-width="5" id="top-bar" />
+                        <line x1="190" y1="30" x2="190" y2="60" stroke="black" stroke-width="5" id="rope" />
+                        <line x1="60" y1="30" x2="60" y2="250" stroke="black" stroke-width="5" id="vertical-bar" />
+                        <line x1="30" y1="250" x2="90" y2="250" stroke="black" stroke-width="5" id="base" />
+                        <circle cx="190" cy="90" r="30" stroke="black" stroke-width="3" fill="none" id="head"
+                            class="hidden" />
+                        <line x1="190" y1="120" x2="190" y2="180" stroke="black" stroke-width="3" id="body"
+                            class="hidden" />
+                        <line x1="190" y1="130" x2="160" y2="160" stroke="black" stroke-width="3" id="left-arm"
+                            class="hidden" />
+                        <line x1="190" y1="130" x2="220" y2="160" stroke="black" stroke-width="3" id="right-arm"
+                            class="hidden" />
+                        <line x1="190" y1="180" x2="160" y2="220" stroke="black" stroke-width="3" id="left-leg"
+                            class="hidden" />
+                        <line x1="190" y1="180" x2="220" y2="220" stroke="black" stroke-width="3" id="right-leg"
+                            class="hidden" />
+                    </svg>
+                </div>
+            </div>
+            <div class="word-and-keyboard">
+                <h4 class="guesses-text">
+                    Incorrect-guesses:
+                    <b>0 / 6</b>
+                </h4>
+                <div style="height: 10px;"></div>
+                <div class="word-area">
+                    <div class="blanks_parent"></div>
+                </div>
+                <div class="keyboard-parent">
+                    <div class="keyboard-row">
+                        <button class="letter-button" data-letter="A">A</button>
+                        <button class="letter-button" data-letter="B">B</button>
+                        <button class="letter-button" data-letter="C">C</button>
+                        <button class="letter-button" data-letter="D">D</button>
+                        <button class="letter-button" data-letter="E">E</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="letter-button" data-letter="F">F</button>
+                        <button class="letter-button" data-letter="G">G</button>
+                        <button class="letter-button" data-letter="H">H</button>
+                        <button class="letter-button" data-letter="I">I</button>
+                        <button class="letter-button" data-letter="J">J</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="letter-button" data-letter="K">K</button>
+                        <button class="letter-button" data-letter="L">L</button>
+                        <button class="letter-button" data-letter="M">M</button>
+                        <button class="letter-button" data-letter="N">N</button>
+                        <button class="letter-button" data-letter="O">O</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="letter-button" data-letter="P">P</button>
+                        <button class="letter-button" data-letter="Q">Q</button>
+                        <button class="letter-button" data-letter="R">R</button>
+                        <button class="letter-button" data-letter="S">S</button>
+                        <button class="letter-button" data-letter="T">T</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="letter-button" data-letter="U">U</button>
+                        <button class="letter-button" data-letter="V">V</button>
+                        <button class="letter-button" data-letter="W">W</button>
+                        <button class="letter-button" data-letter="X">X</button>
+                        <button class="letter-button" data-letter="Y">Y</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="letter-button" data-letter="Z">Z</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-modal hidden">
+        <div class="content">
+            <img src="win.jpeg" alt="Game Result" class="modal-image">
+            <h4 class="modal-message"></h4>
+            <button class="play-again">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
